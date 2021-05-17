@@ -30,7 +30,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -41,7 +41,16 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $new_dress = new Dress();
+
+        $new_dress->fill($data);
+        $new_dress->save();
+
+        return redirect()->route('products.index');
+
+
+
     }
 
     /**

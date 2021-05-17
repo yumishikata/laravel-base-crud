@@ -3,6 +3,7 @@
 @section('title', 'Products')
 
 @section('content')
+    <a href="{{ route('products.create') }} " class="btn btn-primary"> Inserisci nuovo prodotto</a>
     <h2>Lista dei nostri prodotti:</h2>
    
     <table class="table">
